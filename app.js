@@ -9,6 +9,6 @@ app.use((require("./src/routes/home")))
 const port = process.env.PORT? process.env.PORT : 8080
 
 //I put the port
-app.listen(port, () =>{
+app.listen(3002, () =>{
     
 })
