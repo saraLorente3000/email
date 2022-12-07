@@ -1,0 +1,38 @@
+openapi: 3.0.3
+info:
+  title: Swagger Email - OpenAPI 3.0
+  description: |-
+    Mail api description
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: sara.lorente@gmail.com
+  version: 1.0.0
+servers:
+  - url: cloud run
+paths:
+  /send:
+    get:
+      tags:
+        - send
+      summary: Send email
+      description: Send email newsletter/user
+      parameters:
+        - name: email
+          in: query
+          description: Email to which the newsletter should be sent
+          required: true
+          schema:
+            type: string
+        - name: newsletter
+          in: query
+          description: Name of the newsletter
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+        '404':
+          description: Missing required value
+        '500':
+          description: Error
