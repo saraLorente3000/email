@@ -1,4 +1,5 @@
 const express = require('express')
+require('dotenv').config();
 
 //Initialize express
 const app = express();
@@ -9,6 +10,6 @@ app.use((require("./src/routes/home")))
 const port = process.env.PORT? process.env.PORT : 8080
 
 //I put the port
-app.listen(3002, () =>{
+app.listen(port, () =>{
     
 })
